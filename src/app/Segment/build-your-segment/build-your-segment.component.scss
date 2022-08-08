@@ -1,0 +1,86 @@
+.dataset{
+    top: 25px;
+    left: 27px;
+}
+.mat-form-field{
+    width: 257px;
+    line-height: 0.8 !important;
+}
+.mat-form-field-infix{
+    height: 44px;
+}
+.componentname{
+    margin-top: 30px;
+    margin-left: 27px;
+    height: 20px;
+    text-align: left;
+    font: normal normal bold 16px/9px IBM Plex Sans;
+    letter-spacing: 0.15px;
+    color: #78A9FF;
+  }
+  .features{
+      left: 27px;
+      bottom: 10px;
+  }
+  .mat-radio-button {
+    margin: 0 12px;
+  }
+  .labelName{
+    text-align: left;
+    font: normal normal normal 14px/9px IBM Plex Sans;
+    letter-spacing: 0.13px;
+    color: #FFFFFF99;
+    opacity: 1;
+    width: 129px;
+    height: 18px;
+  }
+  .radioBtn{
+    left: 27px;
+    font: normal normal normal 14px/9px IBM Plex Sans;
+    color: #FFFFFF;
+    opacity: 1;
+    // margin-left: 0px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  ::ng-deep .mat-radio-outer-circle {
+    height: 12px !important;
+    width: 12px !important;
+    bottom: 10px !important;
+    border-width: 1px !important;
+}
+::ng-deep .mat-radio-inner-circle{
+    height: 12px !important;
+    width: 12px !important;
+}
+.sensitivity{
+    bottom: 10px;
+}
+label {
+    margin-bottom: 1px !important;
+}
+.add-component{
+    margin-top: 10px;
+    margin-left: 27px;
+    .upload{
+    height: 30px;
+    width: 117px;
+    background-color: #2B46FF;
+    border-color: #2B46FF;
+    color: #f8f9fa;
+    border-radius: 5px;
+    }
+}
+.submitBtn{
+    margin-top: 10px;
+    margin-left: 27px;
+    .upload{
+    height: 30px;
+    width: 67px;
+    background-color: #2B46FF;
+    border-color: #2B46FF;
+    color: #f8f9fa;
+    border-radius: 5px;
+    }
+
+}

@@ -1,0 +1,11 @@
+ng::deep text{
+    fill: cornsilk !important;
+}
+.colour{
+    text-decoration-color: cornsilk;
+}
+::ng-deep ngx-charts-bar-horizontal {
+      text {
+        fill: #fff !important; 
+      } 
+    }

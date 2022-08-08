@@ -1,0 +1,17 @@
+::ng-deep ngx-charts-bar-vertical {
+    text {
+      fill: #fff !important; 
+    } 
+  }
+  .x label{
+    fill: #fff !important; 
+  }
+  // :host ::ng-deep svg{
+  //   margin-left: 5px;
+  //   margin-top: 5px;
+  // }
+
+  .vertical{
+    margin-left: 12px;
+    margin-top: -39px;
+  }

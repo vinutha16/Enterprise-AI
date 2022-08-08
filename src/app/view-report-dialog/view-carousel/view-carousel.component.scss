@@ -1,0 +1,47 @@
+ngb-carousel .wrapper {
+    position: relative;
+    width:680px;
+    height: 540px;
+   // height: 0;
+    //padding-top: 55%; /* Keep ratio for 900x500 images */
+
+  }
+  
+  // ngb-carousel .wrapper>img {
+  //   // position: absolute;
+  //   // top: 0;
+  //   // left: 0;
+  //   // bottom: 0;
+  //   // right: 0;
+  // }
+  // ngb-carousel .wrapper .img-pie {
+  //   //position: absolute;
+  //   // top: 0;
+  //   // left: 144px;;
+  //   // bottom: 0;
+  //   // right: 0;
+  // }
+  // ngb-carousel .wrapper .img-ver {
+  //  // position: absolute;
+  //   //top: 0;
+  //   //left: 144px;;
+  //  // bottom: 0;
+  //  // right: 0;
+  // }
+  // .container-fluid{
+  //     background-color: aliceblue !important;
+  // }
+  ::ng-deep .carousel-control-prev{
+      width: 1px;
+  }
+  ::ng-deep .carousel-control-next{
+    width: 1px;
+}
+  ::ng-deep .carousel-control-next-icon {
+    //margin-left: 90px;
+    position:absolute;
+  }
+  ::ng-deep .carousel-control-prev-icon{
+    //margin-right: 90px;
+    position:absolute;
+  }

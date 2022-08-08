@@ -1,0 +1,32 @@
+mat-form-field{
+    min-width: 93%;
+}
+.row-button {
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin-right: -15px;
+    // margin-left: -15px;
+    width: 97%;
+}
+.button-inline{
+    display: inline-flex;
+    width: inherit;
+}
+.button-col{
+    background-color: #2B46FF;
+
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #2B46FF;
+}
+button{
+    width: 100%;
+}
+::ng-deep .mat-snack-bar-container{
+    margin-top: 30px !important;
+    background-color: blue;
+    color: aliceblue;
+  }
+  ::ng-deep .mat-simple-snackbar{
+    font-size: 20px;
+  }

@@ -1,0 +1,8 @@
+{
+    "name": "Carbon Angular Starter",
+    "short_name": "Starter",
+    "background_color": "#ff00ff",
+    "theme_color": "#ffff00",
+    "display": "standalone",
+    "start_url": "/"
+  }

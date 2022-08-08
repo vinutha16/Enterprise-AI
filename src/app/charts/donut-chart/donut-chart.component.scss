@@ -1,0 +1,22 @@
+// ::ng-deep div {
+//     text {
+//       fill: #fff !important; 
+//       font-size: 7px;
+//     } 
+//   }
+.arc text {
+    font: 8px sans-serif;
+    text-anchor: middle;
+    fill:white;
+  }
+  
+  .arc path {
+    stroke: #fff;
+  }
+  ::ng-deep text{
+    fill:white !important;
+  }
+ :host ::ng-deep svg{
+    margin-left: 94px;
+    margin-top: 60px;
+  }

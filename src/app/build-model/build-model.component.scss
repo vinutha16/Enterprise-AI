@@ -1,0 +1,69 @@
+.parntDiv{
+    margin-top: 30px;
+    margin-left:-30px ;
+}
+.row{
+    max-width: 95%;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+.mat-list-base .mat-list-item .mat-list-item-content-reverse, .mat-list-base .mat-list-option .mat-list-item-content-reverse {
+    flex-direction: row;
+    background: #FFFFFF1F 0% 0% no-repeat padding-box;
+}
+.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text, .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text, .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text, .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text {
+    margin-left: 5%;
+    font-size: 14px;
+}
+.box-size{
+    width: 257px;
+    height: 329px;
+    background: #FFFFFF1F 0% 0% no-repeat padding-box;
+    overflow: auto;
+}
+mat-list-option{
+    flex-direction: row;
+}
+.marginLeft{
+    margin-left: 4%;
+}
+.buttonClr{
+    background-color: blue;
+}
+.buttonDiv{
+    margin-left: 45%;
+    margin-top: 5%;
+}
+.iconColour{
+    color: white;
+}
+.backgroundclr{
+    background: none;
+}
+.disabledMatList{
+    background-color: #4b575c;
+}
+table {
+    width: 90%;
+  }
+  table mat-cell{
+    background-color: black;
+  }
+  table mat-cell:hover{
+    background-color: #ddd;
+  }
+  ::ng-deep mat-table {
+  background: none  !important;
+  }
+  ::ng-deep mat-header-row{
+    background: #3D3D3D 0% 0% no-repeat padding-box;
+  }
+  tr mat-header-row {
+    background: #3D3D3D 0% 0% no-repeat padding-box  !important;
+}
+td.mat-cell{
+    background-color: #161616;
+  }
+  .mat-elevation-z8{
+      width: 100%;
+  }

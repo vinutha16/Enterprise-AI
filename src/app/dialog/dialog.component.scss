@@ -1,0 +1,16 @@
+mat-form-field{
+    min-width: 93%;
+}
+.row-button {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #2B46FF;
+}
+button{
+    width: 100%;
+}

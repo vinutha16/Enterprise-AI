@@ -1,0 +1,43 @@
+<form [formGroup]="explainabilityForm" novalidate>
+    <div class="row features">
+        <div class="col-sm-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Choose Data Set</mat-label>
+                <mat-select formControlName="dataSetName" (selectionChange)="onChangeDataSet($event.value)"
+                    name="dataSetName">
+                    <mat-option>Select Your DataSet</mat-option>
+                    <mat-option *ngFor="let data of dataSetList" [value]="data">
+                        {{data.fileName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Choose Analysis Name</mat-label>
+                <mat-select formControlName="analysisName" name="analysisName"
+                    (selectionChange)="onChangeOfAnalysis($event.value)">
+                    <mat-option>Select Your analysisName</mat-option>
+                    <mat-option *ngFor="let data of segmentNames" [value]="data">
+                        {{data.analysisName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Choose Component</mat-label>
+                <mat-select formControlName="components" name="components">
+                    <mat-option>Select Component</mat-option>
+                    <mat-option *ngFor="let component of componentList" [value]="component">
+                        {{component.componentName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1 view_report">
+            <button class="upload" md-raised-button color="primary"
+                (click)="viewReport(explainabilityForm.value, explainabilityForm.valid)">View Report</button>
+        </div>
+    </div>
+</form>

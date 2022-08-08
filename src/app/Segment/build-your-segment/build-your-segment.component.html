@@ -1,0 +1,126 @@
+<form [formGroup]="buildYourSegment" novalidate
+    (ngSubmit)="submitBuildYourSegment(buildYourSegment.value, buildYourSegment.valid, $event)">
+    <div class="row">
+        <div class="col-sm-3 dataset">
+            <mat-form-field appearance="outline">
+                <mat-label>Choose Data Set</mat-label>
+                <mat-select (selectionChange)="onChangeDataSet($event.value)" formControlName="dataSetName"
+                    name="dataSetName">
+                    <mat-option>Select Your DataSet</mat-option>
+                    <mat-option *ngFor="let data of dataSetList" [value]="data">{{data.fileName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3 dataset" *ngIf="showComponent">
+            <mat-form-field appearance="outline">
+                <mat-label>Analysis Name</mat-label>
+                <input type="text" matInput formControlName="analysisName" name="analysisName"
+                    placeholder="Analysis Name">
+            </mat-form-field>
+        </div>
+        <div hidden>
+            <input type="text" matInput formControlName="dataSetFileId" [(ngModel)]="dataSetField" name="dataSetFileId"
+                placeholder="Analysis Name">
+        </div>
+    </div>
+    <div formArrayName="inputData" *ngIf="showComponent">
+        <div *ngFor=" let unit of buildYourSegment.get('inputData')['controls']; let i = index">
+            <div [formGroupName]="i">
+                <h5 class="componentname">Component{{i+1}}</h5>
+                <div class="row">
+                    <div class="col-sm-3 features">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose Numerical Features</mat-label>
+                            <mat-select formControlName="numfeatures" name="numfeatures" multiple>
+                                <mat-option>Select Numerical Features</mat-option>
+                                <mat-option *ngFor="let feature of dataSetDetails.numericFeatures" [value]="feature">
+                                    {{feature}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3 features">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose Category Features</mat-label>
+                            <mat-select formControlName="catFeatures" name="catFeatures" multiple>
+                                <mat-option>Select Category Features</mat-option>
+                                <mat-option *ngFor="let feature of dataSetDetails.categoryFeatures" [value]="feature">
+                                    {{feature}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3 features">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose Group Features</mat-label>
+                            <mat-select formControlName="groupFeatures" name="groupFeatures" multiple>
+                                <mat-option>Select Group Features</mat-option>
+                                <mat-option *ngFor="let feature of dataSetDetails.groupFeatures" [value]="feature">
+                                    {{feature}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 features">
+                        <label class="labelName">Group Explainability</label>
+                        <div class="form-group">
+                            <mat-radio-group aria-label="Select an option" formControlName="groupExplainability"
+                                id="{{ 'explainability' + i}}">
+                                <mat-radio-button class="radioBtn" for="{{ 'explainability' + i}}" value="true">True
+                                </mat-radio-button>
+                                <mat-radio-button class="radioBtn" for="{{ 'explainability' + i}}" value="false">Flase
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 features">
+                        <label class="labelName">Feature Importance </label>
+                        <div class="form-group">
+                            <mat-radio-group aria-label="Select an option" id="{{ 'feature' + i}}"
+                                formControlName="featureImportance">
+                                <mat-radio-button class="radioBtn" value="true" for="{{ 'feature' + i}}">True
+                                </mat-radio-button>
+                                <mat-radio-button class="radioBtn" value="false" for="{{ 'feature' + i}}">False
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 features">
+                        <label class="labelName">Tree Explainability</label>
+                        <div class="form-group">
+                            <mat-radio-group formControlName="treeExplainability" id="{{ 'tree' + i}}">
+                                <mat-radio-button class="radioBtn" for="{{ 'tree' + i}}" value="true">True
+                                </mat-radio-button>
+                                <mat-radio-button class="radioBtn" for="{{ 'tree' + i}}" value="false">False
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 features">
+                        <label class="labelName">Sensitivity Analysis</label>
+                        <div class="form-group sensitivity">
+                            <mat-radio-group formControlName="sensitivityAnalysis" id="{{ 'sensitivity' + i}}">
+                                <mat-radio-button class="radioBtn" for="{{ 'sensitivity' + i}}" value="true">True
+                                </mat-radio-button>
+                                <mat-radio-button class="radioBtn" for="{{ 'sensitivity' + i}}" value="false">False
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="showComponent">
+        <div class="col-sm-1 add-component">
+            <button class="upload" md-raised-button color="primary" (click)="addComponent()">Add
+                Component</button>
+        </div>
+        <div class="col-sm-3 submitBtn">
+            <button class="upload" md-raised-button color="primary">Submit</button>
+        </div>
+    </div>
+</form>

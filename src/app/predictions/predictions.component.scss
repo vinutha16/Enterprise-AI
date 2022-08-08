@@ -1,0 +1,120 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .left-space{
+     // margin-left: 13px;
+      margin-top: 30px;
+  }
+  .dropzone {
+    width: 90%;
+    height: 153px;
+    display: table;
+    border: dashed 1px #ada8a8;
+    background: black;
+  }
+  .text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .centered {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .left-margin {
+    margin-left: 49px;
+    width: 90%;
+    margin-top: 5rem;
+  }
+  .top-margin{
+    margin-top: 2rem;
+  }
+  .display{
+    display: none;
+  }
+  label {
+    color: blue;
+  }
+  table {
+    width: 90%;
+  }
+  td.mat-cell{
+    background-color: #161616;
+  }
+  .button-download{
+      margin-top: 14px;
+      .upload{
+      height: 35px;
+      width: 240px;
+      background-color: #2B46FF;
+      border-color: #2B46FF;
+      color: #f8f9fa;
+      border-radius: 5px;
+      }
+
+  }
+  .button-downloads{
+      margin-top: 14px;
+      margin-left: -54px;
+      .upload{
+        height: 35px;
+        width: 175px;
+        background-color: #2B46FF;
+        border-color: #2B46FF;
+        color: #f8f9fa;
+      }
+
+
+  }
+
+  .upload:disabled {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+  }
+  .downloadimgtab{
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  ::ng-deep .mat-snack-bar-container{
+    margin-top: 30px !important;
+    background-color: blue;
+    color: aliceblue;
+  }
+  
+
+  ::ng-deep .mat-simple-snackbar{
+    font-size: 20px;
+  }
+
+mat-icon{
+    color: #007bff;
+}
+.paginaterwidth{
+  width: 90%;
+}
+.disable{
+  pointer-events: none;
+  cursor:none;
+  color: #333;
+}
+.tablerow {
+  cursor: pointer;
+  color: #007BFF;
+  position: absolute;
+}
+.tablerow1 {
+  cursor: default;
+  color: #007BFF;
+  position: absolute;
+}
+::ng-deep .mat-tooltip {
+  color: rgb(243, 243, 229);
+  background-color: black;
+ font-size:15px;
+ width:100%
+}

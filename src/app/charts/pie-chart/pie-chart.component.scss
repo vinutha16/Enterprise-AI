@@ -1,0 +1,48 @@
+::ng-deep ngx-charts-pie-chart {
+    text {
+      fill: #fff !important; 
+    } 
+  }
+  :host ::ng-deep svg{
+    margin-left: 93px;
+    margin-top: 60px;
+  }
+  text{
+    fill: #fff !important; 
+  }
+  // svg{
+  //   margin-left: 93px;
+  // }
+  .chart-legend {
+    font-family: 'Open Sans', sans-serif;
+  }
+  pie-3d{
+    #chart{
+     position: relative;
+    }
+}
+
+path.highlighted{
+    fill-opacity: 0.9;
+    stroke-width: 5.5;
+    }
+ 
+    .tooltip-legend {
+        position: relative;
+        height: 10px;
+        width: 10px;
+        top: 5px;
+        left: 5px;
+        border-radius: 2px;
+        display: inline-block;
+        font-weight: bold;
+       // background-color:red;
+    }
+    .fontchange{
+        font-weight: bold;
+        padding-left: 15px;
+    }
+    .fontmargin{
+        font-weight: bold;
+        padding-left: 5px;
+    }

@@ -1,0 +1,119 @@
+<div class="col-12 left-space">
+  <div class="row">
+    <div class="col-md-3" *ngIf="tabName.module != 'customersegment'">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Select Your Model</mat-label>
+        <mat-select (selectionChange)="onChangeDataModelSelect($event.value)" [(ngModel)]="DataSetModel">
+          <mat-option *ngFor="let model of modelData" [value]="model">
+            {{model.modelOriginalName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3" *ngIf="tabName.module == 'customersegment'">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Select Your Model</mat-label>
+        <mat-select (selectionChange)="onChangeDataModelSelect($event.value)">
+          <mat-option [value]="">
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 button-download">
+      <button class="upload" md-raised-button color="primary" (click)="PredictionsDataDownload()">Download Sample
+        Predictions Data
+      </button>
+    </div>
+    <div class="col-md-3 button-downloads">
+      <!-- <button class="upload"  md-raised-button color="primary">Download Sample Data</button> -->
+    </div>
+
+
+  </div>
+  <div>
+    <div class="col-12 dropzone" appDrag (files)="filesDropped($event)" style="background:none">
+      <div class="text-wrapper">
+        <div class="centered">
+          <input id="fileInput" type="file" class="display" (change)="fileBrowseHandler($event)" #inputFile />
+          <img width="50px" height="50px" [src]='"../assets/icons/cloud--upload.svg"'
+            onclick="document.getElementById('fileInput').click();">
+        </div>
+        <div class="centered">Drag and drop or <label for="fileDropRef"
+            onclick="document.getElementById('fileInput').click();">Browse </label></div>
+        <div class=" centered">
+          <h4>(Upload Data Set for Predictions)</h4>
+          <!-- <div  *ngFor="let file of files; let i = index">
+                <div class="info">
+                  <h4 class="name">
+                    {{ file?.name }}
+                  </h4>
+                </div>
+              </div> -->
+          <h3 *ngIf="show">{{fileNameUpload}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 button-download"><button class="upload" [disabled]="disableMake"
+        (click)="makePredictionsData()" md-raised-button color="primary"> Make Predictions
+      </button></div>
+    <div class="col-md-4"></div>
+
+  </div>
+  <br>
+  <div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort
+      *ngIf="tabName.module != 'customersegment'">
+      <!-- Name Column -->
+      <ng-container matColumnDef="predictionDataSetName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Uploaded File</th>
+        <td mat-cell *matCellDef="let element"> {{element.predictionDataSetName}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="predictionFileName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header style="text-align:center"> Predictions </th>
+        <td mat-cell *matCellDef="let element" [matTooltip]="getTooltip(element.predictionFileName)">
+          <a>
+            <mat-icon class="icon bulb" class="downloadimgtab"
+              [ngClass]="element.predictionStatus == 'Y' ? 'Y': 'disable'" (click)="TableFiledownload(element)">
+              downloading</mat-icon><span [ngClass]="element.predictionStatus == 'Y' ? 'Y': 'disable'" class="tablerow1"
+              *ngIf="element.predictionFileName != null">
+              {{(element.predictionFileName.length > 15) ? ((element.predictionFileName).slice(0, 15) + '...') :
+              element.predictionFileName}}
+            </span>
+          </a>
+        </td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="predictionStatus">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="element.predictionStatus == 'Y'">Available</span>
+          <span *ngIf="element.predictionStatus == 'N'">In Progress</span>
+          <span *ngIf="element.predictionStatus == 'BE'">Errored Out</span>
+        </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="predictionId">
+        <th mat-header-cell *matHeaderCellDef> Report </th>
+        <td mat-cell *matCellDef="let element">
+          <a>
+            <mat-icon class="icon bulb" [ngClass]="element.predictionStatus == 'Y' ? 'Y': 'disable'">visibility
+            </mat-icon><span [ngClass]="element.predictionStatus == 'Y' ? 'Y': 'disable'" class="tablerow"
+              (click)="viewreport(element)">
+              View Report</span>
+          </a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator class="paginaterwidth" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+.bg {
+    /* The image used */
+    // background-image: url("/assets/DataFlow_BG1.png");
+    /* Full height */
+    height: 100%;
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+/* Layout */
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.centerFlex {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    float: left;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.divAlign {
+    margin: 10% 0% 0% 35%;
+    width: 20%;
+    padding: 16px;
+}
+
+.divSpace {
+    margin-top: 10px;
+}
+
+.btnRightBtm {
+    width: 100%;
+    padding: calc(0.875rem - 3px) 11px calc(0.875rem - 3px) 10px !important;
+}
+
+.borderStyle {
+    border-bottom: 1px solid #c6c6c6;
+    padding-bottom: 7px;
+    width: 100%;
+}
+
+.field-icon {
+    bottom: 18%;
+    margin-right: 5%;
+    right: 0px;
+    position: absolute;
+}
+
+.column {
+    position: relative;
+}
+
+.arrow-icon {
+    fill: white;
+}
+
+.outer {
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.parentDiv {
+    top: 10%;
+    position: absolute;
+    width: 100%;
+}

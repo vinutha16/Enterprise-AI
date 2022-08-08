@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Edit Title / Add Description</h1>
+<div mat-dialog-content *ngFor='let item of data.headerData'>
+  <div class="row">
+    <div class="col-12">
+      <mat-form-field appearance="outline">
+        <mat-label>Data Field</mat-label>
+        <input matInput [(ngModel)]="item.key">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-form-field appearance="outline">
+        <mat-label>Discription</mat-label>
+        <textarea matInput [(ngModel)]="item.desc"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <div class="row-button">
+    <button mat-flat-button color="primary" [mat-dialog-close]="data.headerData" (click)="Save()"
+      cdkFocusInitial>Submit</button>
+  </div>
+</div>

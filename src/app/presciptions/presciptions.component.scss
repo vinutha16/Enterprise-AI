@@ -1,0 +1,13 @@
+.Presciptions-text{
+position: relative; 
+height: 50vh; 
+margin: 0;
+h1 {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 100%; 
+    text-align: center;
+    margin: 0; 
+   }
+}

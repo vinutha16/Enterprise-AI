@@ -1,0 +1,115 @@
+
+// @import '~@angular/material/theming';
+
+// @include mat-core();
+
+
+// $enterprise-AI-primary: mat-palette($mat-indigo);
+// $enterprise-AI-accent: mat-palette($mat-pink, A200, A100, A400);
+
+
+// $enterprise-AI-warn: mat-palette($mat-red);
+
+// $enterprise-AI-theme: mat-light-theme((
+//   color: (
+//     primary: $enterprise-AI-primary,
+//     accent: $enterprise-AI-accent,
+//     warn: $enterprise-AI-warn,
+//   )
+// ));
+
+// @include angular-material-theme($enterprise-AI-theme);
+
+
+// @import '~carbon-components/scss/globals/scss/styles';
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@import '../src/assets/scss/base/header.scss';
+@import '../src/assets/scss/base/variables';
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+html,body {
+    // font-family: 'IBMPlexRegular';
+  height: 100%;
+}
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 5px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+.basic-container {
+  padding: 5px;
+}
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color:#1162FB; 
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color:#1162FB;
+  background-color:#1162FB ;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color:#1162FB;
+}
+// ::ng-deep .mat-form-field--no-underline .mat-input-underline {
+//   background-color: transparent !important;
+// }
+// label{
+// color:rgb(64, 17, 235) !important;
+//   font-size:16px !important;
+// }
+// .label-ripple{
+//     color:#1162FB;
+// }
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+.mat-dialog-container {
+    background-color: #191F2C;
+}
+::ng-deep .mat-form-field-label{
+    color:wheat !important;
+}
+.mat-input-element::placeholder{
+   color: red;
+}
+mat-password-strength .mat-progress-bar-fill::after {
+  background-color: #42BE65;
+}
+.mat-password-field.mat-form-field.mat-focused .mat-form-field-label{
+color: #42BE65;
+}
+.mat-password-field.mat-form-field.mat-focused .mat-form-field-ripple{
+background-color: #42BE65;
+}
+.mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
+  background-color: #F2BD00;
+}
+.mat-progress-bar.mat-warn .mat-progress-bar-buffer {
+  background-color: white;
+}
+.mat-progress-bar.mat-warn .mat-progress-bar-fill::after {
+  background-color: #ED4951;
+}
+// vinutha changes
+
+.mat-radio-label{
+  align-items: normal !important;
+}
+.mat-radio-label-content{
+  padding-left: 0px !important;
+}
+.mat-form-field-infix{
+  height: 44px;
+}

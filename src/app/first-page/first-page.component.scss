@@ -1,0 +1,120 @@
+.column{
+    justify-content: space-between;
+    width: 45%;
+
+}
+.row{
+    column-count: 2;
+}
+.box1{
+    // top: 157px;
+    // left: 265px;
+    // width: 249px;
+    // height: 155px;
+    width:100%;
+    height:100%;
+    background: transparent url("../../assets/icons/MaskGroup7.svg") 0% 0% no-repeat padding-box;
+    opacity: 1;    
+
+}
+.textimg{
+    position: absolute;
+    top: 7rem;
+    left: 3rem;
+    font-size: 20px;
+}
+.container{
+   height: 150px;
+   position: relative;
+}
+button{
+    width: 80%;
+    height: 40px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.box {
+    border: 1px solid #383838;
+    padding-top: 20px;
+    // margin-left: 3rem;
+    margin-bottom: 30px;
+    // margin-top: 25px;
+    display: block;
+    font-size: 18px;
+    box-shadow: 0px 8px 8px 0 rgba(0,0,0,0.31);
+    -webkit-box-shadow: 0 8px 8px 0 rgba(0,0,0,0.31);
+    &.box-trans {
+        background: transparent;
+        font-size: 15px;
+        margin: 0px;
+        padding: 10px 10px 0px;
+    }
+  
+     label {
+         font-size:14px;
+         color:#ddd;
+     }
+     .box-title {
+        padding-bottom:15px;
+        display: inline-block;
+        .light {
+            color:#ccc;
+            font-size: 16px;
+            font-weight: 400;
+            padding-left:20px;
+        }
+    }
+  
+  }
+  .row-top{
+      margin-top: 2rem;
+  }
+  .bgButton{
+    background-color: #1162FB;
+  }
+  .tabDiv{
+      margin-top:2rem;
+
+  }
+
+::ng-deep .mat-tab-label-container {
+    background: #FFFFFF17 !important;
+}
+
+::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+ // background-color: #FCE500;
+ // font-weight: 700;
+  color: #78A9FF;
+ // opacity: 1;
+}
+  .mat-tab-group {
+    margin-top: 74px;
+  }
+
+  .footer{
+    width:100%;
+    height: 20px;
+    position: absolute;
+    padding-top: 90px;
+    display: block;
+}
+.ibmimg{
+    width: 38px;
+    height: 18px;
+}
+.line{
+    border-top: 0.5px solid #e9ecef;
+}
+.ibm{
+    display: inline;
+    margin-right: 4px;
+}
+
+.linedata{
+    margin-right: 4px;
+}

@@ -1,0 +1,27 @@
+body {
+	background-color: #191919;
+	color: #FFFFFF;
+}
+.header-wrap {
+	background-color:#0F62FE;
+}
+header {	
+	border-bottom: #0F62FE solid 2px;
+	margin-bottom: 20px;
+	div
+	{		
+		padding : 1rem 0 1rem 2rem;
+	}
+	color:#FFFFFF;
+	font-size: 20px;	
+    line-height: 1.525rem;
+    text-align:center;
+   
+	.project-name
+	{
+	   padding: 10px 0;
+	   text-transform: uppercase;
+	   color: #FFFFFF;
+      
+    }	   
+}

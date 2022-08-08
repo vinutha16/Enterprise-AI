@@ -1,0 +1,54 @@
+<div class="header-img">
+</div>
+<div></div>
+   
+<input type="file" (change)="onChange($event)" #inputFile />
+
+<div *ngIf="isExcelFile === false">
+  This is not an Excel file
+</div>
+<span *ngIf="spinnerEnabled" class="k-i-loading k-icon"></span>
+<!-- <table>
+  <th *ngFor="let key of keys">
+    {{ key }}
+  </th>
+  <tr *ngFor="let item of (dataSheet | async)">
+    <td *ngFor="let key of keys">
+      {{ item[key] }}
+    </td>
+  </tr>
+</table> -->
+
+<div class="example-container mat-elevation-z8 " *ngIf="show" #TABLE>
+  <table mat-table #table [dataSource]="newdata1" class="mat-elevation-z8">
+        {{newformatkeys | json}}
+    <ng-container *ngFor="let column of newformatkeys;let last=last; let i = index">
+      <ng-container [matColumnDef]="column.name">
+        <th mat-header-cell *matHeaderCellDef>
+          <ng-container *ngIf="i !== editRowId" >
+            <span>{{column.head}}<img src="../../assets/icons/edit.svg" (click)="editshow(i,column.head)"></span>
+          </ng-container >
+         
+          <ng-container *ngIf="i == this.editRowId" >
+            
+            <input matInput class="input-data"  [id]="column.head" [(ngModel)]="column.head" (blur)="editRowId=-1" >
+  
+        </ng-container>
+        </th>
+      <td mat-cell *matCellDef="let element"> {{element[column.name]}} </td>
+    </ng-container>
+    </ng-container>
+  
+    <!-- <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr> -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+ <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> 
+</div>
+
+<div>
+  <button (click)="removeData()">Remove Data</button>
+  <br>
+  <button (click)="export()">Upload Data</button>
+</div>->

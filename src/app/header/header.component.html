@@ -1,0 +1,27 @@
+<div class="example-container" *ngIf="navbarService.visible">
+  <mat-toolbar class="example-toolbar">
+    <mat-icon class="menu-icon" (click)="navbarService.toggleSideNav()">menu</mat-icon>
+    <img class="kyndrylimg" src="../assets/icons/kyndryl.png">
+    <span style="margin-left:2rem">ENTERPRISE AI</span>
+    <span class="example-spacer"></span>
+    <span class="example-fill-remaining-space"></span>
+    <button style="padding-right:7rem" mat-icon-button class="example-icon"
+      aria-label="Example icon-button with share icon">
+      <span style="font-size: 20px;padding-right: 1rem;"
+        *ngIf="userName != null && userName != false">{{userName}}</span>
+      <mat-icon>person_outline</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="belowMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>power_settings_new</mat-icon>
+        <span>Logout</span>
+      </button>
+      <!-- <button mat-menu-item>Setting</button> -->
+    </mat-menu>
+  </mat-toolbar>
+
+</div>

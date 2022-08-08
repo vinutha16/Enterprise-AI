@@ -1,0 +1,33 @@
+<!-- <div class="d-flex flex-flow-column h-100">
+  <app-header *ngIf="!disableTopNavbar"></app-header>
+
+
+  <mat-sidenav-container class="flex-grow-1" style="overflow: auto !important;" autosize>
+    <mat-sidenav *ngIf="navbarService.disableTopNavbar" #sidenav mode="side" [opened]="true">
+
+
+      <mat-nav-list style="margin-top:4rem">
+        <a mat-list-item *ngFor="let item of navItems" [routerLink]="item.link" (click)="isExpanded = !isExpanded"
+          routerLinkActive="active">
+        
+          <div style="display:inline-block; position:relative;">
+
+            <img (click)="isExpanded = !isExpanded" width="25px" height="25px"
+              [src]='"../assets/icons/"+item.icon+".svg"'>
+            <span style="display:inline-block;font-size:16px;position:relative;top:6px;left:15px;padding-right: 10px;"
+              matLine *ngIf="navbarService.showSideNav">{{item.name}}</span>
+          </div>
+
+        </a>
+
+      </mat-nav-list>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content style="background-color: #161616">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div> -->
+
+<app-side-navigation></app-side-navigation>

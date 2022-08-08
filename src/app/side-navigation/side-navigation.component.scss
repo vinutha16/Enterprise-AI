@@ -1,0 +1,86 @@
+
+.mat-typography p {
+    margin: 0 0 0px !important;
+}
+// .show{
+//     visibility: hidden;
+// }
+.mat-side-nav{
+    width:auto !important;
+}
+.mat-drawer-inner-container {
+    max-width:230px !important;
+    min-width:30px !important;
+}
+.mat-list-base .mat-list-item.mat-list-item-with-avatar, .mat-list-base .mat-list-option.mat-list-i{
+    height:50px !important;
+  
+}
+.mat-list-base{
+    padding-top: 0px !important;
+   
+}
+.mat-drawer{
+  background-color: #1D1D1D;
+}
+.a{fill:grey;}
+.colorimg{
+    fill:white;
+    color: white;
+}
+
+.mat-nav-list{
+    .disable{
+        pointer-events: none;
+        cursor:none;
+        color: #333;
+    }
+  .mat-list-item.active{
+    border-left:#78A9FF solid 5px;
+    color:#78A9FF !important;
+    .colorimg{
+        color:#78A9FF !important;
+        fill:#78A9FF !important;
+    }
+    // .mat-icon{
+    //   color:#78A9FF;
+    // }
+    .a{
+      color:#78A9FF;
+      fill:#78A9FF;
+    }
+  }
+  .mat-list-item svg{
+    fill:blueviolet !important;
+  }
+}
+
+// .example-fill-remaining-space {
+//   /* This fills the remaining space, by using flexbox. 
+//      Every toolbar row uses a flexbox row layout. */
+//   flex: 1 1 auto;
+// }
+
+.example-container {
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.example-sidenav {
+   user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}

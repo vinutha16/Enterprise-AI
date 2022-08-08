@@ -1,0 +1,48 @@
+<div class="container-fluid" *ngIf="carouselDisplay">
+  <ngb-carousel interval="false">
+    <ng-template ngbSlide *ngFor="let table of newTableData">
+      <div class="wrapper">
+        <h3>{{table.title}}</h3>
+        <app-view-table class="img-table" [inputTableData]="table"></app-view-table>
+      </div>
+    </ng-template>
+     <ng-template ngbSlide *ngFor="let verBar of verticalBardata">
+      <div class="wrapper">
+        <h3>{{verBar.title}}</h3>
+        <app-vertical-bar class="img-ver" [inputVerBarData]="verBar"></app-vertical-bar>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide *ngFor="let pie of pieChartdata">
+      <div class="wrapper">
+        <h3>{{pie.title}}</h3>
+        <app-pie-chart class="img-pie" [inputPieData]="pie"></app-pie-chart>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide *ngFor="let horizontal of horizontalBarData">
+      <div class="wrapper">
+        <h3>{{horizontal.title}}</h3>
+        <app-diverge-bar-chart [inputDivergeData]="horizontal"></app-diverge-bar-chart>
+      </div>
+    </ng-template>
+     <ng-template ngbSlide *ngFor="let tree of treeMapChartData">
+      <div class="wrapper">
+        <h3>{{tree.title}}</h3>
+        <br>
+        <app-tree-chart [inputTreeData]="tree"></app-tree-chart>
+      </div>
+    </ng-template>
+    <!--<ng-template ngbSlide>
+      <div class="wrapper">
+        <br>
+        <app-tree-map-new [inputVal]="treemapdata"></app-tree-map-new>
+      </div>
+    </ng-template> -->
+    <ng-template ngbSlide *ngFor="let donut of donutchartdata">
+      <div class="wrapper">
+        <h3>{{donut.title}}</h3>
+        <app-donut-chart class="img-pie" [inputDountData]="donut"></app-donut-chart>
+      </div>
+    </ng-template>
+    
+  </ngb-carousel>
+</div>

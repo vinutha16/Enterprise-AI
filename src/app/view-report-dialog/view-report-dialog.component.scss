@@ -1,0 +1,26 @@
+.row-button {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 0px;
+    width: 100%;
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #2B46FF;
+}
+button{
+    width: 100%;
+}
+.spinner-center{
+    // margin-top: -87px;
+     z-index: 10000;
+      margin-left: auto; 
+      margin-right: auto;
+     /* margin-right: 144px; */
+     margin-left: 242px;
+     //width:680px;
+    // height: 50px;
+    // width:680px;
+    padding-top: 183px;
+     height: 490px;
+   }

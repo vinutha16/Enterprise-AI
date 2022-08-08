@@ -1,0 +1,76 @@
+<h2 mat-dialog-title>Create New Model</h2>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-12">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Choose Data Set</mat-label>
+        <mat-select formControlName="dataSetName" (selectionChange)="onChangeDataSet($event.value)">
+          <mat-option>Select Your DataSet</mat-option>
+          <mat-option *ngFor="let Data of dataSets" [value]="Data">
+            {{Data.fileName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Choose Target Variable</mat-label>
+        <mat-select formControlName="targetVariable">
+          <mat-option>Select Target Variable</mat-option>
+          <mat-option *ngFor="let Data of tragetDataSets" [value]="Data">
+            {{Data}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12" *ngIf="globalBaisValue">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Choose Identifier Data</mat-label>
+        <mat-select formControlName="identifierData">
+          <mat-option>Select Identifier Data</mat-option>
+          <mat-option *ngFor="let Data of tragetDataSets" [value]="Data">
+            {{Data}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12" *ngIf="globalCexValue">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Choose ReviewField Data</mat-label>
+        <mat-select formControlName="reviewField">
+          <mat-option>Select ReviewField Data</mat-option>
+          <mat-option *ngFor="let Data of tragetDataSets" [value]="Data">
+            {{Data}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!-- <div class="col-12" *ngIf="globalCexValue">
+      <mat-form-field appearance="outline" style="width: 15rem">
+        <mat-label>Choose RatingField Data</mat-label>
+        <mat-select formControlName="ratingField">
+          <mat-option>Select RatingField Data</mat-option>
+          <mat-option *ngFor="let Data of tragetDataSets" [value]="Data">
+            {{Data}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> -->
+    <div class="col-12">
+      <mat-form-field appearance="outline" style="width: 15rem" [ngClass]="{ 'is-invalid': submitted && f.modelname.errors }">
+        <mat-label>Modelname</mat-label>
+        <input matInput formControlName="modelname" placeholder="Please Enter Modelname" >
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <div class="row-button">
+    <div class="col-12" class="button-inline">
+      <button class="button-col" mat-button type="button" (click)="dialogRef.close()">Cancel</button>
+        <button class="button-col" mat-button type="submit">Submit</button>
+    </div>
+  </div>
+</div>
+</form>
